@@ -84,5 +84,12 @@ const variable_name = value;
 
 ## Javascript Code execution cycle
 
-![js-program-execution-cycleS](./assets/js-program-execution-cycle.png)
+![js-program-execution-cycle](./assets/js-program-execution-cycle.png)
+
+use [AST Explorer](https://astexplorer.net/) to get the abtract syntax tree of a code.
+
+## Task outcomes
+if we assign an object to another variable they are connected. **These both variable reference the same memory location where Non-primitive data is stored.**
+
+
 

@@ -1,5 +1,5 @@
 # 40 Days Javascript
-![Banner](./Assets/Screenshot%20from%202026-01-14%2020-49-13.png)
+![Banner](./Assets/homepage-banner.png)
 
 ## Table Of Contents
 

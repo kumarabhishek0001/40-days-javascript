@@ -254,3 +254,69 @@ function count(start){
 
 let start = 1;
 count(start);
+
+console.log('#############################')
+function sum2(a,b){
+    return a+b;
+}
+
+function double1(x){
+    return 2*x;
+}
+
+console.log(double1(sum2(1,3)));
+
+
+function storeNums(...rest){
+    
+    console.log('rest:',rest)
+}
+
+storeNums(1,2,3,4,5,6,7,8,9,10)
+
+console.log('#############################')
+
+function outerCheck(){
+    console.log('Outer ran successfully!')
+
+    function innerCheck(){
+        console.log('Trying to return the inner function');
+    }
+
+    return innerCheck;
+}
+
+const innerResult = outerCheck();
+innerResult()
+
+
+console.log('#############################')
+
+function calling(func){
+    console.log('Hello from calling!')
+    func();
+}
+
+calling(function(){
+    console.log('Hello from callback')
+})
+
+
+console.log('#############################')
+let signalStrength = 8.6
+
+function startDoingSomething(func){
+    console.log('Inside the function')
+
+
+    if(signalStrength > 8.5){
+        console.log('I am starting to:');
+        func();
+    }
+}
+
+function connectDB(){
+    console.log('Connect to DB');
+}
+
+startDoingSomething(connectDB)

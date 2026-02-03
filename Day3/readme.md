@@ -180,6 +180,10 @@ isNaN('') // -> false
 isNaN(' ') // -> false
 ```
 
+```js
+0/0 // -> NaN
+```
+
 #### Comparison of Objects
 
 here we are not comparing the key values of the objects but we are comparing the address where obj1 and obj2 are stored since these are not refernce of the same memory location it result in false
@@ -209,4 +213,92 @@ let obj2 = obj;
 
 console.log(obj1 === obj2) // true
 ```
+
+### Logical Operators
+
+This has another load of bullshit
+**Remember the place where ever js expects and boolean value and does not receive a boolean value it does type conversion or boolean coercion of that particular value**
+
+**truthy flasy values**
+
+falsy value -> the values that on type conversion to booleans gives a false
+
+**values that return false. Only these**
+false, 0, -0, 0n, "" (empty string), null, undefined, NaN.
+
+truthy values -> Except the falsy above all are true.
+
+<hr>
+
+1. Logical And(&&)
+return the first falsy, else the last truthy when both are truthy.
+
+```js
+console.log(true && true)
+console.log(false && true)
+console.log(true && false)
+console.log(false && false)
+```
+
+```js
+console.log(Boolean('Cow')) //true
+console.log(Boolean('horse')) //true
+
+console.log('cow' && 'horse'); // -> horse
+
+// both are truthy hence returns late
+```
+
+```js
+console.log(Boolean('Cow')) //true
+console.log(Boolean('')) // true
+
+console.log('' && 'horse') // -> ''
+
+// returns first falsy.
+```
+
+2. Logical OR (||):
+**Return the first truthy value, or the last value if all falsy**
+
+3. Negate Operator (!):
+**Reverses the boolean value. truth -> false, false -> true**
+
+```js
+console.log(!true);
+
+// this is also a valid expression
+console.log(!'cow')
+```
+
+5. Nullish Cohesion
+
+If the first value is null or undefined then return second else return first.
+```js
+// nullish coalescing
+// if the first can be converted to null or undefined return second else return fist
+
+console.log(undefined ?? 'hello');
+console.log(null ?? 'Hello')
+
+console.log((0/0) ?? null);
+
+// use can -> you can give a default value if somewhere result can be undefined or null
+```
+
+
+6. Condition Ternary Operator
+
+**Syntax-**(condtion) ? statement executes if true : statement executes if false
+
+ternary produce a value
+
+```js
+
+function eligible(Age){
+    return (Age>20) ? true : false;
+}
+```
+
+
 

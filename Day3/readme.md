@@ -71,3 +71,27 @@ console.log(num2) //11
 //fir value save hogi
 console.log(b) //11
 ```
+
+
+### Assignment Operator 
+Assign values
+
+**examples-**
+
+```js
+let x = 10;
+
+x += 5; // x=x+5 (15)
+console.log(x)
+
+x -= 3; // x=x-3 (12)
+console.log(x)
+
+x *= 2; // x=x*2 (24)
+console.log(x)
+
+x /= 4; // x=x/2 (6)
+console.log(x)
+```
+
+

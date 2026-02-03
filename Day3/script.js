@@ -13,11 +13,11 @@ console.log("Day 3")
 let a = 10;
 let b = 20;
 
-console.log(a+b); // addition operator in case of string does concatination
-console.log(a-b);
+console.log(a+b); // addition operator in case of string does concatination.
+console.log(a-b); // substraction operator.
 console.log(b-a);
-console.log(a*b);
-console.log(a/b);
+console.log(a*b); // multiplciation operator.
+console.log(a/b); // division operator.
 
 let f_name = "alice";
 let l_name = "jordan";

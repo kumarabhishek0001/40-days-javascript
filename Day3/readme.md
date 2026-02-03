@@ -315,3 +315,17 @@ function eligible(Age){
 ### Relation operator 
 *uses the keyword **in**.*
 refer to objects module.
+
+
+### Type Operator
+
+gives the type
+
+**!!!! Important**
+
+```js
+console.log(typeof(null)) // -> returns null;
+```
+
+### Instance Of
+- to check if an object is an instance of a particular constructor or class.

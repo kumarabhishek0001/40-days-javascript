@@ -302,3 +302,16 @@ function eligible(Age){
 
 
 
+### Bitwise Operator
+
+1. Bitwise and (&)
+2. Bitwise or (|)
+3. Bitwise xor (^)
+4. Bitwise not (^)
+5. Bitwise left shift
+6. Bitwise right shift
+
+
+### Relation operator 
+*uses the keyword **in**.*
+refer to objects module.

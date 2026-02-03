@@ -91,7 +91,7 @@ console.log(obj1 === obj2) //not comparing name key
 // obj 1 will have refernce of of address where obj1 data is stored;
 // we are here comparing the memory address where obj1 and obj2 are stored
 
-obj1 = obj2 // not obj1 and obj 2 are referencing the same memory address
+obj1 = obj2 // now obj1 and obj 2 are referencing the same memory address
 // here the result of this operation is true
 console.log(obj1 === obj2) // true
 

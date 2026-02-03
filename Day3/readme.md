@@ -94,4 +94,119 @@ x /= 4; // x=x/2 (6)
 console.log(x)
 ```
 
+### Comparison Operator
+
+**loose comparison**
+The loose equality operator (==) performs type coercion before comparing values if the types are different.
+
+type-coercion (badhyakarita, jor-jabardasti)
+
+1. String to number
+
+```js
+console.log(Number('  ')); //0
+console.log(Number('')); //0
+
+// '', ' ' -> 0
+```
+
+
+2. Boolean to number
+
+```js
+console.log(Number(true)) // 1
+console.log(Number(false)) // 2
+
+// false -> 0 and true -> 1
+```
+
+3. special case
+
+```js
+null == undefined // true
+```
+
+for every other case in loose comparison null is not equal to anything.
+
+'''js
+console.log(null == 0);
+console.log(undefined == 0);
+'''
+
+4. Object to primitive
+
+```js
+console.log([] == 0)
+console.log([5] == 5)
+console.log(['5'] == 5)
+```
+
+
+To avoid all this bullshit we use strict comparison
+
+Here it is simple no type coercion. Data types remain what they are if Data type are not same false is returned
+
+
+#### Bullshit of NaN
+NaN -> Not a Number
+Comparison of NaN with anything results in False if you see comparison of NaN with anything staright away false.
+
+```js
+console.log(NaN === NaN) // false
+
+NaN < 5   //-> false
+NaN > 5   //-> false
+NaN <= 5  //-> false
+NaN >= 5  //-> false
+
+```
+
+
+*So if you have to check, is some value is NaN, you cannot just (NaN === Values) use **isNaN()**.*
+
+Now the working of isNaN is also another thing
+-> It does type conversion of the given value to a number first. 
+
+```js
+Number('Hello') //-> NaN.
+isNaN('Hello') //-> true.
+```
+
+```js
+Number(''); // -> 0
+Number(' '); // -> 0
+
+isNaN('') // -> false
+isNaN(' ') // -> false
+```
+
+#### Comparison of Objects
+
+here we are not comparing the key values of the objects but we are comparing the address where obj1 and obj2 are stored since these are not refernce of the same memory location it result in false
+
+```js
+let obj1 = {
+    'name': 'alice'
+}
+
+let obj2 = {
+    'name' : 'alice'
+}
+
+console.log(obj1 === obj2)
+```
+
+
+but if two object refereces to the same memeory location then the result is true.
+
+```js 
+let obj = {
+    'name': 'alice'
+}
+
+let obj1 = obj;
+let obj2 = obj;
+
+console.log(obj1 === obj2) // true
+```
 

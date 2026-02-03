@@ -23,13 +23,13 @@ These different kinds of values are called data types.
 
 **Data types in Javascript are of two types:**
 1. *Primitive*: Primitive data types are Simple values that stores one single value, are not objects and cannot be changed(immuatable).
-    a. Number - integers, decimals
-    b. String - text
-    c. boolean - true/false
-    d. undefined - variable declared but not initialized.
-    e. null - represents nothing
-    f. bigInt - represents very large integer
-    g. symbol - unique identifiers (symbol(id)) 
+    a. Number - integers, decimals<br>
+    b. String - text<br>
+    c. boolean - true/false<br>
+    d. undefined - variable declared but not initialized.<br>
+    e. null - represents nothing<br>
+    f. bigInt - represents very large integer<br>
+    g. symbol - unique identifiers (symbol(id))
 
 2. *Non-Primitive*: Non-primitive data types are complex values that can store multiple values are objects and can be changed 
     a. objects

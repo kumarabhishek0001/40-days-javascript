@@ -170,48 +170,19 @@ switch (month) {
         console.log('Invalid month');
 }
 
-
-function equalSides(a,b,c){
-
-    let sum = 0;
-
-    if(a === b){
-        sum += 1;
-        console.log('sum1', sum)
+// 1 2 1
+function traingleType(a,b,c){
+    if(a==b && b==c && c==a){
+        console.log('Equilateral Triangle')
     }
 
-    if(b === c){
-        sum+=1;
-        console.log('sum2', sum)
-    }
-
-
-    if(c === a){
-        sum += 1;
-        console.log('sum3', sum)
-    }
-
-    return sum;
-
-}
-function triangleType(a,b,c){
-
-    let result = equalSides(a,b,c);
-
-    if(result == 3){
-        console.log('Equilateral Triangle');
-    }
-
-    else if(result == 2){
+    else if(a==b || b==c || c==a){
         console.log('Isosceles Triangle');
     }
 
     else{
-        console.log('Scalene Triangle');
+        console.log('Scalene Triangle')
     }
-
-    
 }
 
-triangleType(1,2,1)
-
+traingleType(1,1,1)

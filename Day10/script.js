@@ -43,3 +43,43 @@ toDo();
 }
 console.log(count);
 
+// -------------------------------------------- Scope Chain-----------------------------------------
+// - Js engine checks for variable if it is present in the current scope it fine if not it 
+// keeps going one scope above to find the scope
+// First the engine looks in it's scope only then goes a level above
+// Nearest scope is given priority
+
+// code - pending
+
+var count = 10;
+function outer(){
+    var count = 20;
+
+    function inner(){
+        var count = 30;
+        console.log(count); //inner() scope -> 30
+    }
+
+    inner();
+    console.log(count); //outer() scope -> 20;
+}
+
+outer();
+console.log(count); // global scope has count -> 10;
+
+
+// ------------------------------------------ Variable Shadowing ----------------------------------
+
+let message = "I am doing well.";
+
+function howAreYou(){
+    let message = "I am not doing well.";
+    console.log(message);
+}
+
+howAreYou();
+console.log(message);
+
+
+// If the inner scope has the same variable name as the upper scope then the inner scope overshadows
+// the outer scope or engine prioritize the variable nearest to the scope

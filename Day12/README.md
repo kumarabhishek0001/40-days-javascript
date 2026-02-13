@@ -545,6 +545,45 @@ console.log(numberOfSubjects);
 ```
 
 
+## Aliasing
+
+```js
+const {name: student_name, age: student_age} = student
+console.log(student_name, student_age);
+```
+key in object -> another name for key
+
+## Destructuring Nested Objects
+
+```js
+const {address : {city,zip}} = student;
+console.log(city)
+console.log(zip)
+```
+
+## Function Destructuring
+
+Rather than passing all object data in the function we extract relevent properties, these properties are passed in the parameters. 
+
+*without destructuring in the params*
+
+```js
+function sendEmail(student){
+  console.log(student.parents.email)
+}
+```
+
+*with destructuring in the params*
+
+```js
+function sendEmail2({parents:{email}}){
+  console.log(email)
+}
+
+sendEmail2(student)
+```
+
+
 
 
 

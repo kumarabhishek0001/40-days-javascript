@@ -1,6 +1,3 @@
-// object destructuring
-console.log('Object Destructuring.....');
-
 const student = {
   name: "Rahul Sharma",
   age: 16,
@@ -22,42 +19,26 @@ const student = {
   }
 };
 
-
-// how to access properties
-
-// let name = student.name;
-// let subjects = student.subjects;
-
-// console.log(name, subjects)
+const {std: standard} = student;
+console.log(standard)
 
 
-let {name, address} = student;
-console.log(name, address)
+// desctructuring nested object
+const {address : {city,zip}} = student;
+console.log(city,zip)
 
 
-// creating default value 
-// why we need it -> safe extraction, 
-// if the key exist in my object good, return it
-// if doesn't use defalt value
-
-//if the key exist in my object good, return it
-// if doesn't use defalt value
-
-function createUser({name, role='user'}){
-  console.log(name,role);
+// function destructuring
+// normal
+function sendEmail(student){
+  console.log(student.parents.email)
 }
 
-const user1 = {
-  name : 'abhishek',
-  role : 'admin',
-} 
+sendEmail(student);
 
-const user2 = {
-  name : 'divyansh'
+// destructuring
+function sendEmail2({parents:{email}}){
+  console.log(email)
 }
 
-// role exist so it prints admin.
-createUser(user1)
-
-// role does not exist so it prints user.
-createUser(user2)
+sendEmail2(student)

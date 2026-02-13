@@ -35,6 +35,29 @@ let {name, address} = student;
 console.log(name, address)
 
 
-// creating new variables 
-const {age, sports = 'tennis'} = student;
-console.log(age, sports)
+// creating default value 
+// why we need it -> safe extraction, 
+// if the key exist in my object good, return it
+// if doesn't use defalt value
+
+//if the key exist in my object good, return it
+// if doesn't use defalt value
+
+function createUser({name, role='user'}){
+  console.log(name,role);
+}
+
+const user1 = {
+  name : 'abhishek',
+  role : 'admin',
+} 
+
+const user2 = {
+  name : 'divyansh'
+}
+
+// role exist so it prints admin.
+createUser(user1)
+
+// role does not exist so it prints user.
+createUser(user2)

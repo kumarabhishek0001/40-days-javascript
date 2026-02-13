@@ -3,22 +3,22 @@ console.log('----------- Destructuring function return value -----------');
 const getStudent = () => {
     return {
         name: "Rahul Sharma",
-            age: 16,
-                std: 10,
+        age: 16,
+        std: 10,
 
-                    subjects: ["Math", "Science", "English", "History"],
+        subjects: ["Math", "Science", "English", "History"],
 
-                        parents: {
+        parents: {
             mother: "Sunita Sharma",
-                father: "Amit Sharma",
-                    email: "amit.sharma@example.com"
+            father: "Amit Sharma",
+            email: "amit.sharma@example.com"
         },
 
         address: {
             street: "123 MG Road",
-                city: "Delhi",
-                    country: "India",
-                        zip: "110001"
+            city: "Delhi",
+            country: "India",
+            zip: "110001"
         }
     }
 }
@@ -33,7 +33,7 @@ const getStudent = () => {
 // console.log(name, subjects);
 
 // method-2
-const {name: anotherName, subjects: anotherSubject} = getStudent();
+const { name: anotherName, subjects: anotherSubject } = getStudent();
 console.log(anotherName, anotherSubject)
 
 
@@ -58,9 +58,9 @@ const student = [
     }
 ];
 
-for(let {name, grade} of student){
+for (let { name, grade } of student) {
 
     console.log(name, grade);
-    
+
 }
 

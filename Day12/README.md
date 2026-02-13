@@ -547,6 +547,8 @@ console.log(numberOfSubjects);
 
 ## Aliasing
 
+once aliasing is done you can only use alias name the real name of property does not exist anymore
+
 ```js
 const {name: student_name, age: student_age} = student
 console.log(student_name, student_age);
@@ -582,6 +584,101 @@ function sendEmail2({parents:{email}}){
 
 sendEmail2(student)
 ```
+
+
+## Destructuring Function's return value
+
+```js
+const getStudent = () => {
+  return {
+    name: "Rahul Sharma",
+    age: 16,
+    std: 10,
+
+    subjects: ["Math", "Science", "English", "History"],
+
+    parents: {
+      mother: "Sunita Sharma",
+      father: "Amit Sharma",
+      email: "amit.sharma@example.com"
+    },
+
+    address: {
+      street: "123 MG Road",
+      city: "Delhi",
+      country: "India",
+      zip: "110001"
+    }
+  }
+}
+```
+
+*accessing without destructuring*
+
+```js
+const name = getStudent().name
+console.log(name)
+
+const age = getStudent().age
+console.log(age);
+```
+
+*accessing with destructuring*
+
+```js
+const { name: student_name, age: student_age } = getStudent();
+console.log(student_age)
+console.log(student_name)
+
+```
+
+## Destructuring in Loops
+
+```js
+const students = [
+
+  {
+    name: 'william',
+    grade: 'A'
+  },
+
+  {
+    name: 'Tom',
+    grade: 'B+'
+  },
+
+  {
+    name: 'Bob',
+    grade: 'B'
+  }
+
+];
+
+for(let {name, grade} of students){
+  console.log(name,grade);
+}
+```
+
+## Optional Chianing 
+Now we don't know when we get JSON from an API, what properties are available to us and what are not.
+
+here we need optional chaining.
+
+
+```js
+const employee = {
+    salary: {
+        bonus: 300
+    }
+}
+```
+We may not know if employee recieved a bonus or not so we use optional chaining
+
+It is used to avoid getting null
+```js 
+const bonus = employee.departments?.bonus
+```
+
 
 
 

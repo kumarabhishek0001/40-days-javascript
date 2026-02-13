@@ -1,44 +1,13 @@
-const student = {
-  name: "Rahul Sharma",
-  age: 16,
-  std: 10,
+// optional chianing
 
-  subjects: ["Math", "Science", "English", "History"],
-
-  parents: {
-    mother: "Sunita Sharma",
-    father: "Amit Sharma",
-    email: "amit.sharma@example.com"
-  },
-
-  address: {
-    street: "123 MG Road",
-    city: "Delhi",
-    country: "India",
-    zip: "110001"
+const employee = {
+  salary: {
+    bonus: 300
   }
-};
-
-const {std: standard} = student;
-console.log(standard)
-
-
-// desctructuring nested object
-const {address : {city,zip}} = student;
-console.log(city,zip)
-
-
-// function destructuring
-// normal
-function sendEmail(student){
-  console.log(student.parents.email)
 }
 
-sendEmail(student);
+// say this is the data we get from an api
+// we don't know what is available to us and what is not
 
-// destructuring
-function sendEmail2({parents:{email}}){
-  console.log(email)
-}
-
-sendEmail2(student)
+const anotherName = employee.salary?.bonus
+console.log(anotherName)

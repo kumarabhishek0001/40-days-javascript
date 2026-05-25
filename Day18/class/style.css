@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.main-class {
+    font-size: large;
+    padding: 10px;
+    border: 2px solid red;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+
+.secondary-class {
+    font-size: large;
+    padding: 10px;
+    border: 2px solid teal;
+    background-color: greenyellow;
+    color: black;
+    border-radius: 5px;
+}
+
+.test {
+    display: none;
+}
